@@ -13,6 +13,6 @@ export default
 		<IndexRoute component={ Home }/>
 		<Route path="users" component={ Users }/>
 		<Route path="error" component={ GenericError }/>
-		<Route path="*" component={ NotFound } status={ 404 }/>
+		{/* <Route path="*" component={ NotFound } status={ 404 }/> */}
 	</Route>
 )
