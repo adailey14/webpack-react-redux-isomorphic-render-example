@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { flat as style } from 'react-styling'
-import { Title } from 'react-isomorphic-render'
+import { Title, preload, redirect } from 'react-isomorphic-render'
 
 import husky from '../../assets/images/husky.jpg'
 
+// Let's always redirect to the users page
+@preload(({ dispatch }) => dispatch(redirect('/users')))
 export default class Page extends Component
 {
 	render()
 	{
-		const markup = 
+		const markup =
 		(
 			<section className="content">
 				<Title>Home</Title>

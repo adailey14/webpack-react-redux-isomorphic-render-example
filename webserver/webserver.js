@@ -14,7 +14,7 @@ web.files('/assets', path.join(__dirname, '../client/build/assets'))
 web.proxy('/api', `http://localhost:${configuration.services.api.port}`, { name: 'API service' })
 
 // Proxy all the rest requests to Webpage rendering server
-web.proxy(`http://localhost:${configuration.services.rendering.port}`, { name: 'Page rendering service' })
+web.proxy('/basename', `http://localhost:${configuration.services.rendering.port}/basename`, { name: 'Page rendering service' })
 
 // Start web server
 web.listen(configuration.web.port).then(() =>
